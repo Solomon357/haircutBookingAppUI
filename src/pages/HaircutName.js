@@ -4,7 +4,9 @@ import { NameField } from "./customstyles/CustomField.styles";
 const HaircutName = () => {
   const { form, handleChange } = useFormContext();
 
-  const content = (
+  //console.log(form.haircutBookingName)
+
+  return (
     <NameField
       type="string"
       sx={{ width: "50%", margin: "2%" }}
@@ -15,10 +17,8 @@ const HaircutName = () => {
       variant="outlined"
       onChange={handleChange}
       value={form.haircutBookingName}
-    />
+    />    
   );
-
-  return content;
 }
  
 export default HaircutName;

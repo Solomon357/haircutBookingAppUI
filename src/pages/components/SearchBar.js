@@ -21,8 +21,8 @@ const SearchBar = ({ searchInput, handleSearch }) => {
       }
     }
   }
-
-  const content = (
+  
+  return (
     <SearchField
       type="input"
       onFocus={() => window.scroll({ top: 0, behavior: 'smooth'})}
@@ -39,9 +39,7 @@ const SearchBar = ({ searchInput, handleSearch }) => {
         )
       }}
     />
-  )
-  
-  return content;
+  );
 }
  
 export default SearchBar;

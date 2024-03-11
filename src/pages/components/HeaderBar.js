@@ -28,7 +28,7 @@ const HeaderBar = () => {
       }
     }
 
-    const content = (
+    return (
       <AppBar 
         elevation={2}
         className='header-content'
@@ -60,11 +60,8 @@ const HeaderBar = () => {
 
           </Toolbar>
         </Container>
-      </AppBar>
-    )
-
-    return content;
-
+      </AppBar>  
+    );
   }, [page, title])
 }
  

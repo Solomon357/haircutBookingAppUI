@@ -26,34 +26,34 @@ const HaircutConfirm = () => {
   };
 
   //tester submit function
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   console.log(JSON.stringify(form))
-  //   navigate('/', {state: true});
-  // }
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log(JSON.stringify(form))
+    navigate('/', {state: true});
+  }
 
   // proper handleSubmit function here
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch("http://localhost:8081/submitpost", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(form),
-    })
-    .then((response) => {
-      console.log(response)
-      console.log("Success!")
-      navigate('/', {state: true})
-    })
-    .catch((error) => {
-      console.error("Error:", error)
-      setErrorToast(true)
-    });
-  };
-
-  const content = (
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   fetch("http://localhost:8080/submitpost", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(form),
+  //   })
+  //   .then((response) => {
+  //     console.log("response status:", response.status)
+  //     console.log("Success!")
+  //     navigate('/', {state: true})
+  //   })
+  //   .catch((error) => {
+  //     console.error("Error:", error)
+  //     setErrorToast(true)
+  //   });
+  // };
+  
+  return (
     <Box sx={{ mt:"40px", maxWidth:"500px", width:"100%"}}>
 
       <Stack direction={"column"} display={"flex"} alignItems={"center"} spacing={4}>
@@ -86,14 +86,12 @@ const HaircutConfirm = () => {
 
         <Snackbar open={errorToast} autoHideDuration={6000} onClose={handleClose}>
           <Alert onClose={handleClose} severity="error" variant="filled">
-            <Typography>Something went wrong! Please try again</Typography>
+            <Typography>Something went wrong! Please try again later</Typography>
           </Alert>
         </Snackbar>
       </Stack>
     </Box>
   );
-  
-  return content;
 }
  
 export default HaircutConfirm;

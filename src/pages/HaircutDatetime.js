@@ -8,7 +8,6 @@ import { useFetch } from "../customhooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-
 const HaircutDatetime = () => {
   const { form, handleChange, handleDateChange } = useFormContext();
   const { allOptions, isLoading, error } = useFetch(`http://localhost:8080/allTimeInfo`);
@@ -63,7 +62,7 @@ const HaircutDatetime = () => {
     </FormControl>
   )
 
-  const content = (      
+  return (
     <Box 
       sx={{ 
         display: "flex", 
@@ -84,9 +83,8 @@ const HaircutDatetime = () => {
 
       {!isLoading && !error && timeInputs}
     </Box>
-  );
 
-  return content;
+  );
 }
  
 export default HaircutDatetime;

@@ -25,23 +25,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path="/" element={
-            <ThemeProvider theme={theme}>
-              <Home />
-            </ThemeProvider>
-          } />
+          <Route path="/" element={<Home />} />
           <Route path="/bookHaircut" element={
-            <ThemeProvider theme={theme}>    
-              <FormProvider>
+            <FormProvider>
+              <ThemeProvider theme={theme}>  
                 <HaircutForm />
-              </FormProvider>
-            </ThemeProvider>
+              </ThemeProvider>
+            </FormProvider> 
           } />
-          <Route path="*" element={
-          <ThemeProvider theme={theme}>
-            <ErrorPage />
-          </ThemeProvider>
-          } />
+          <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );

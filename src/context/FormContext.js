@@ -15,8 +15,11 @@ const title = {
 export const FormProvider = ({ children }) => {
 
   //TO DO FOR TOMORROW:  
-  // 1. see if i can useMemo in formContext 
-  // 2. deploy the project on a server
+  // 1. deploy the project on a server
+  // (a). encrypt uri (access) for mongodb
+  // (b). allow mongodb network access from a range if IP addresses ??
+  // (c). deploy the servlet on a cloud platform
+  // (d). deploy the ui on ideally the same cloud platform
 
   const [page, setPage] = useState(0)
 
@@ -97,13 +100,8 @@ export const FormProvider = ({ children }) => {
   const disablePrev = page === 0
   
   //disable next based on parameters established above
-  const disableNext =
-    (page === Object.keys(title).length - 1)
-    || (page === 0 && !canNextPage)
-    || (page === 1 && !canNextPage)
-    || (page === 2 && !canNextPage)
-    || (page === 3 && !canNextPage)
-
+  const disableNext = (page === Object.keys(title).length - 1) || !canNextPage
+  
   return (
     <FormContext.Provider value={{ setForm, setPage, handleChange, handleDateChange, title, page, form, canSubmit, disablePrev, disableNext }}>
       {children}

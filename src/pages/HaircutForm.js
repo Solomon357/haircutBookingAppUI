@@ -11,7 +11,7 @@ const HaircutForm = () => {
     pagebody: {
       position: "relative",
       minHeight: "100vh",
-      minWidth: "100vw",
+      minWidth: "100%",
       backgroundColor: "#231f20",
       color: "antiquewhite"
     },
@@ -30,7 +30,7 @@ const HaircutForm = () => {
     }
   }
 
-  const content = (
+  return (
     <Box className='page-body' sx={styles.pagebody} >
 
       <HeaderBar />
@@ -53,8 +53,6 @@ const HaircutForm = () => {
       <Footer />
     </Box>
   );
-
-  return content;
 }
 
 export default HaircutForm;

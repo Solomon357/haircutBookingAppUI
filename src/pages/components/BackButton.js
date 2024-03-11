@@ -20,8 +20,8 @@ const BackButton = () => {
     const handlePrev = () => {
       setPage(prev => prev - 1)
     }
-
-    const content = (
+    
+    return (
       <PrevButton
         sx={styles.goback}
         variant="contained"
@@ -30,10 +30,8 @@ const BackButton = () => {
         disabled={disablePrev}
       >
         <Typography fontWeight={"medium"}>Go Back</Typography>
-      </PrevButton>         
-    )
-    
-    return content;
+      </PrevButton>   
+    );
   }, [setPage, disablePrev])
 }
  

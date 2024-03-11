@@ -72,14 +72,12 @@ const FormProgress = () => {
         ))}
       </Stepper>
     )
-
-    const content = (
+    
+    return (
       <Box sx={styles.steppercontainer}>
         {small ? smallStepper : bigStepper}
       </Box>
-    )
-
-    return content;
+    );
     
   },[page, title, small])
 }

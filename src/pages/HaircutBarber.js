@@ -69,7 +69,7 @@ const HaircutBarber = () => {
     </FormControl>
   )
 
-  const content = (
+  const barberContent = (
     <>
       {isLoading && <Box color={"#faa749"}><CircularProgress color="inherit"/></Box>}
 
@@ -80,7 +80,7 @@ const HaircutBarber = () => {
       }
     </>
   )
-  return content;
+  return barberContent;
 }
  
 export default HaircutBarber;

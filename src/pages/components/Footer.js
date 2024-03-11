@@ -17,7 +17,7 @@ const Footer = () => {
     }
   }
 
-  const content = (
+  return (
     <Stack component="footer" direction={"row"} sx={styles.footer} flexWrap={"wrap"}>
       
       <Stack direction={"row"} alignItems={"center"}>
@@ -40,9 +40,7 @@ const Footer = () => {
         </Link>
       </Stack>
     </Stack>
-  )
-
-  return content;
+  );
 }
  
 export default Footer;

@@ -83,7 +83,7 @@ const HaircutType = () => {
     </FormControl>
   )
 
-  const content = (
+  return (
     <>
       <SearchBar 
         searchInput={searchQuery} 
@@ -94,12 +94,10 @@ const HaircutType = () => {
       {!isLoading && !error && filteredOptions.length === 0 
         ? <Typography>No matches from search!! please type something else</Typography> // make this look better later
         : 
-         haircutInputs
+        haircutInputs
       }
     </>
   );
-
-  return content;
 }
  
 export default HaircutType;

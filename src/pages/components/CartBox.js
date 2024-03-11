@@ -142,13 +142,11 @@ const CartBox = () => {
     </Box>         
   )
 
-  const content = (
+  return (
     <Box sx={styles.cartcontainer}>
       {small ? smallCart : bigCart}
     </Box>
-  )
-
-  return content;
+  );
 }
  
 export default CartBox;

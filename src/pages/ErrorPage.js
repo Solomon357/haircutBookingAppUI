@@ -24,14 +24,21 @@ const ErrorPage = () => {
       maxWidth: "350px",
       height: "100%",
       maxHeight:"350px",
+    },
+    texts: {
+      fontFamily: [
+        "Montserrat", 
+        "sans-serif"
+      ].join(",")
     }
+
   }
   
   return (
     <Box sx={styles.main}>
 
       <Stack sx={styles.content} direction={"column"} spacing={"10px"}>
-        <Typography fontWeight={"bold"} variant="h2"> Oh no...</Typography>
+        <Typography sx={styles.texts} fontWeight={"bold"} variant="h2"> Oh no...</Typography>
 
         <Box
           component={"img"}
@@ -40,12 +47,12 @@ const ErrorPage = () => {
           alt="ErrorIcon" 
         />
         
-        <Typography fontWeight={"medium"} variant="h4"> Somethings gone wrong! </Typography>
+        <Typography sx={styles.texts} fontWeight={"medium"} variant="h4"> Somethings gone wrong! </Typography>
           
-        <Typography>Click the button below to return to safety</Typography>               
+        <Typography sx={styles.texts}>Click the button below to return to safety</Typography>               
 
         <MainButton href="/">
-          <Typography>Go Home</Typography>
+          <Typography sx={styles.texts}>Go Home</Typography>
         </MainButton>
 
       </Stack>
